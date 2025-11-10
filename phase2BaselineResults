@@ -1,0 +1,14 @@
+=== PHASE 2 BASELINES ===
+Data unit: microseconds  (scale divisor=1000000.0)
+Train duration: 14.40h | Val: 4.80h | Test: 4.80h
+
+[Poisson]  (univariate)
+  λ_hat(train)        : 52.272511 events/sec
+  Val: RMSE            = 62.2234, hit@200 = 0.000, LL(val) ≈ 1216030.65 (relative)
+  Test: RMSE           = 57.6793, hit@200 = 0.000, LL(test) ≈ 902319.51 (relative)
+
+[ARIMA]  (counts, next-Δ forecasting)
+  best (p,d,q)         : (2, 0, 1)
+  Val: RMSE            = 62.2016
+  Test: RMSE           = 58.2480, hit@200 = 0.000
+  Bins: train=103679 val=34559 test=34559 (Δ=0.5s)
